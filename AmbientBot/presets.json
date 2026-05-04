@@ -1,0 +1,225 @@
+{
+  "_comment": "Single URL string or list of URLs (picked randomly). Leave '' where you still need the link.",
+
+  "_moods": {
+    "_comment": "Used by --battle and future mood commands. These loop until --play reverts.",
+    "battle": [
+      "https://www.youtube.com/watch?v=9Q_da2FxEPI",
+      "https://www.youtube.com/watch?v=xV4pZgTe94E",
+      "https://www.youtube.com/watch?v=2SXDkyJZyKY",
+      "https://www.youtube.com/watch?v=hUZKHOZAW9E",
+      "https://www.youtube.com/watch?v=7xkM8mWC4Kk",
+      "https://www.youtube.com/watch?v=QIBx-Uvlvuw",
+      "https://www.youtube.com/watch?v=Ukmq3BFgefY",
+      "https://www.youtube.com/watch?v=C2V4XopnBRE",
+      "https://www.youtube.com/watch?v=h7ha6JMgQwk",
+      "https://www.youtube.com/watch?v=kdaXMg-iULs"
+    ]
+  },
+
+  "_oneshots": {
+    "_comment": "Play ONCE when someone says the keyword, then ambient resumes automatically.",
+
+    "gojo":              "https://www.youtube.com/watch?v=yox2Yz4Ni2o",
+    "infinity":          "https://www.youtube.com/watch?v=yox2Yz4Ni2o",
+    "hollow purple":     "https://www.youtube.com/watch?v=yox2Yz4Ni2o",
+
+    "saiki":             "https://www.youtube.com/watch?v=XoALAsflk5w",
+    "alas oscuras":      "https://www.youtube.com/watch?v=XoALAsflk5w",
+    "dark wings":        "https://www.youtube.com/watch?v=XoALAsflk5w",
+    "poder oscuro":      "https://www.youtube.com/watch?v=XoALAsflk5w",
+    "dark power":        "https://www.youtube.com/watch?v=XoALAsflk5w",
+    "teleport":          "https://www.youtube.com/watch?v=XoALAsflk5w",
+    "psychic":           "https://www.youtube.com/watch?v=XoALAsflk5w",
+
+    "mini boss":         "https://www.youtube.com/watch?v=bYxGsHJHtYg",
+    "minijefe":          "https://www.youtube.com/watch?v=bYxGsHJHtYg",
+
+    "monokuma":          "https://www.youtube.com/watch?v=ELfxtdEakhk",
+    "culpable":          "https://www.youtube.com/watch?v=e0dZnWkzv2U",
+    "cuerpo":            "https://www.youtube.com/watch?v=bWrurwGugZE",
+    "muere":             "https://www.youtube.com/watch?v=bWrurwGugZE",
+    "body":              "https://www.youtube.com/watch?v=bWrurwGugZE",
+    "encontraron":       "https://www.youtube.com/watch?v=bWrurwGugZE",
+
+    "gohan":             "https://www.youtube.com/watch?v=6LQT_zTxT8w",
+    "rabia":             "https://www.youtube.com/watch?v=6LQT_zTxT8w",
+    "ginyu":             "https://www.youtube.com/watch?v=rWgEXZpeSqY",
+    "pose especial":     "https://www.youtube.com/watch?v=rWgEXZpeSqY",
+
+    "sans":              "",
+    "megalovania":       "",
+
+    "plus ultra":        "",
+    "deku":              "",
+    "one for all":       "",
+
+    "saitama":           "",
+    "one punch":         "",
+
+    "boss fight":        "",
+    "fase final":        "",
+    "jefe":              "",
+
+    "titan":             "",
+    "las murallas":      "",
+    "shinzou":           "",
+
+    "respiracion":       "",
+    "tanjiro":           "",
+    "hinokami":          "",
+
+    "ghoul":             "",
+    "kagune":            "",
+    "mascara":           "",
+
+    "kira":              "",
+    "death note":        "",
+    "near":              "",
+
+    "victoria":          "",
+    "victory":           "",
+    "ganamos":           "",
+
+    "ultimo aliento":    "",
+    "adios":             "",
+
+    "esperanza":         "",
+    "hope":              "",
+    "no todo":           "",
+
+    "epico":             "",
+    "nakama":            "",
+
+    "evoluciona":        "",
+    "spike":             "",
+
+    "batalla":           "",
+    "lucha":             "",
+
+    "cae":               "",
+    "sacrificio":        "",
+    "ultima":            ""
+  },
+
+  "_triggers": {
+    "_comment": "Switch ambient track when someone says this in chat. Stays until --play reverts.",
+
+    "giorno":            "https://www.youtube.com/watch?v=U0TXIXTzJEY",
+    "il vento":          "https://www.youtube.com/watch?v=U0TXIXTzJEY",
+    "gold experience":   "https://www.youtube.com/watch?v=U0TXIXTzJEY",
+
+    "razonamiento final":"https://www.youtube.com/watch?v=e0dZnWkzv2U",
+    "climax":            "https://www.youtube.com/watch?v=e0dZnWkzv2U",
+
+    "memoria":           "https://www.youtube.com/watch?v=4aS8PPXRaCw",
+    "flashback":         "https://www.youtube.com/watch?v=4aS8PPXRaCw",
+    "recuerdo":          "https://www.youtube.com/watch?v=4aS8PPXRaCw",
+
+    "zombie":            "https://www.youtube.com/watch?v=_9VcrTyrg_g"
+  },
+
+  "ruin":            ["https://www.youtube.com/watch?v=MJDn70jh1V0"],
+  "ciudad":          ["https://www.youtube.com/watch?v=FQSHcl6TJb4", "https://www.youtube.com/watch?v=MJDn70jh1V0"],
+  "urban":           ["https://www.youtube.com/watch?v=FQSHcl6TJb4", "https://www.youtube.com/watch?v=MJDn70jh1V0"],
+
+  "nieve":           "https://www.youtube.com/watch?v=BvKiZzyaMK8",
+  "snow":            "https://www.youtube.com/watch?v=BvKiZzyaMK8",
+  "invierno":        "https://www.youtube.com/watch?v=BvKiZzyaMK8",
+  "winter":          "https://www.youtube.com/watch?v=BvKiZzyaMK8",
+
+  "biblioteca":      "https://www.youtube.com/watch?v=4ql1QKcjJPM",
+  "academia":        "https://www.youtube.com/watch?v=4ql1QKcjJPM",
+  "library":         "https://www.youtube.com/watch?v=4ql1QKcjJPM",
+
+  "pantano":         "https://www.youtube.com/watch?v=fhUqu-g0pVY",
+  "swamp":           "https://www.youtube.com/watch?v=fhUqu-g0pVY",
+  "cienaga":         "https://www.youtube.com/watch?v=fhUqu-g0pVY",
+
+  "wasteland":       "",
+  "yermo":           "",
+  "exterior":        "",
+
+  "sobreviviente":   "",
+  "survivor":        "",
+
+  "lab":             "",
+  "instalacion":     "",
+  "facility":        "",
+
+  "peligro":         "",
+  "danger":          "",
+  "infectado":       "",
+
+  "bunker":          "",
+  "base":            "",
+  "shelter":         "",
+
+  "safe zone":       "",
+  "santuario":       "",
+  "oasis":           "",
+
+  "pueblo":          ["https://www.youtube.com/watch?v=NSlkW1fFkyo"],
+  "village":         ["https://www.youtube.com/watch?v=NSlkW1fFkyo"],
+
+  "campo":           "",
+  "granja":          "",
+  "farm":            "",
+
+  "mercado":         "https://www.youtube.com/watch?v=FQSHcl6TJb4",
+
+  "noche":           "https://www.youtube.com/watch?v=RHz0XYKxyIY",
+  "night":           "https://www.youtube.com/watch?v=RHz0XYKxyIY",
+  "midnight":        "https://www.youtube.com/watch?v=RHz0XYKxyIY",
+
+  "misterio":        ["https://www.youtube.com/watch?v=kkzMLgHo2EI", "https://www.youtube.com/watch?v=eoCmoZQokRU", "https://www.youtube.com/watch?v=xKSRb0y6Lb8", "https://www.youtube.com/watch?v=RB0s1zQb-F8"],
+  "mystery":         ["https://www.youtube.com/watch?v=kkzMLgHo2EI", "https://www.youtube.com/watch?v=eoCmoZQokRU", "https://www.youtube.com/watch?v=xKSRb0y6Lb8", "https://www.youtube.com/watch?v=RB0s1zQb-F8"],
+
+  "castillo":        "https://www.youtube.com/watch?v=5qap5aO4i9A",
+  "mansion":         "https://www.youtube.com/watch?v=5qap5aO4i9A",
+  "castle":          "https://www.youtube.com/watch?v=5qap5aO4i9A",
+
+  "casa":            ["https://www.youtube.com/watch?v=kQ_YJF-tgXc", "https://www.youtube.com/watch?v=RuwMGXtiLt0"],
+  "taberna":         ["https://www.youtube.com/watch?v=kQ_YJF-tgXc", "https://www.youtube.com/watch?v=RuwMGXtiLt0"],
+  "aldea":           ["https://www.youtube.com/watch?v=kQ_YJF-tgXc", "https://www.youtube.com/watch?v=RuwMGXtiLt0", "https://www.youtube.com/watch?v=NSlkW1fFkyo"],
+  "refugio":         ["https://www.youtube.com/watch?v=kQ_YJF-tgXc", "https://www.youtube.com/watch?v=RuwMGXtiLt0"],
+
+  "ciudad moderna":  "https://www.youtube.com/watch?v=GTesXj_27EE",
+  "downtown":        "https://www.youtube.com/watch?v=GTesXj_27EE",
+
+  "desierto":        "https://www.youtube.com/watch?v=0hEYvdMoF2g",
+  "desert":          "https://www.youtube.com/watch?v=0hEYvdMoF2g",
+  "arena":           "https://www.youtube.com/watch?v=0hEYvdMoF2g",
+
+  "ocean":           ["https://www.youtube.com/watch?v=SfaNKs2KZ1o", "https://www.youtube.com/watch?v=_9VcrTyrg_g", "https://www.youtube.com/watch?v=cHcLOLJHlMY"],
+  "mar":             ["https://www.youtube.com/watch?v=SfaNKs2KZ1o", "https://www.youtube.com/watch?v=_9VcrTyrg_g", "https://www.youtube.com/watch?v=cHcLOLJHlMY"],
+  "isla":            ["https://www.youtube.com/watch?v=SfaNKs2KZ1o", "https://www.youtube.com/watch?v=_9VcrTyrg_g", "https://www.youtube.com/watch?v=cHcLOLJHlMY"],
+  "playa":           ["https://www.youtube.com/watch?v=SfaNKs2KZ1o", "https://www.youtube.com/watch?v=_9VcrTyrg_g", "https://www.youtube.com/watch?v=cHcLOLJHlMY"],
+
+  "bosque":          ["https://www.youtube.com/watch?v=fWquuWkHVP4&t=10s", "https://www.youtube.com/watch?v=ZnmjFqwi7bI"],
+  "forest":          ["https://www.youtube.com/watch?v=fWquuWkHVP4&t=10s", "https://www.youtube.com/watch?v=ZnmjFqwi7bI"],
+  "dungeon":         "https://www.youtube.com/watch?v=fWquuWkHVP4&t=10s",
+  "cueva":           ["https://www.youtube.com/watch?v=fWquuWkHVP4&t=10s", "https://www.youtube.com/watch?v=DWKKsB0rD40"],
+  "cave":            ["https://www.youtube.com/watch?v=fWquuWkHVP4&t=10s", "https://www.youtube.com/watch?v=DWKKsB0rD40"],
+
+  "lluvia":          ["https://www.youtube.com/watch?v=mPZkdNFkNps", "https://www.youtube.com/watch?v=MJDn70jh1V0"],
+
+  "cafe":            ["https://www.youtube.com/watch?v=woz5qvDdMRM", "https://www.youtube.com/watch?v=C4nTv-pVk0k", "https://www.youtube.com/watch?v=Ao9wiLQ9j00"],
+  "interior":        ["https://www.youtube.com/watch?v=woz5qvDdMRM", "https://www.youtube.com/watch?v=C4nTv-pVk0k", "https://www.youtube.com/watch?v=Ao9wiLQ9j00"],
+  "bar":             ["https://www.youtube.com/watch?v=woz5qvDdMRM", "https://www.youtube.com/watch?v=C4nTv-pVk0k", "https://www.youtube.com/watch?v=Ao9wiLQ9j00"],
+
+  "tavern":          "https://www.youtube.com/watch?v=UjONBBMDDdk",
+  "inn":             "https://www.youtube.com/watch?v=UjONBBMDDdk",
+  "city":            ["https://www.youtube.com/watch?v=lP4CpHGBpSQ", "https://www.youtube.com/watch?v=MJDn70jh1V0"],
+  "market":          "https://www.youtube.com/watch?v=FQSHcl6TJb4",
+  "town":            ["https://www.youtube.com/watch?v=lP4CpHGBpSQ", "https://www.youtube.com/watch?v=NSlkW1fFkyo"],
+  "space":           "https://www.youtube.com/watch?v=2OPdCGCjNOo",
+  "void":            "https://www.youtube.com/watch?v=2OPdCGCjNOo",
+  "rain":            ["https://www.youtube.com/watch?v=mPZkdNFkNps", "https://www.youtube.com/watch?v=MJDn70jh1V0"],
+  "storm":           "https://www.youtube.com/watch?v=mPZkdNFkNps",
+  "throne":          "https://www.youtube.com/watch?v=5qap5aO4i9A",
+  "camp":            "https://www.youtube.com/watch?v=ulD3RBcYiXc",
+  "fire":            "https://www.youtube.com/watch?v=ulD3RBcYiXc",
+
+  "_default":        "https://www.youtube.com/watch?v=77ZozI0rw7w"
+}
