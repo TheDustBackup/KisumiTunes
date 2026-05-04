@@ -5,7 +5,9 @@ from discord.ext import commands
 from config import Config
 from db.mongo import init_db
 
-discord.opus.load_opus('/opt/homebrew/lib/libopus.dylib')
+import platform
+if platform.system() == 'Darwin':
+    discord.opus.load_opus('/opt/homebrew/lib/libopus.dylib')
 
 intents = discord.Intents.default()
 intents.message_content = True
