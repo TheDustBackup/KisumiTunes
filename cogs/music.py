@@ -10,7 +10,6 @@ from db.mongo import get_track
 from presets.tracks import get_preset, describe_preset, match_trigger, match_oneshot, get_mood
 
 _YTDL_BASE: dict = {
-    'format': 'bestaudio/best',
     'quiet': True,
     'no_warnings': True,
     'default_search': 'auto',
@@ -19,12 +18,16 @@ _YTDL_BASE: dict = {
 if Config.YTDLP_COOKIES:
     _YTDL_BASE['cookiefile'] = Config.YTDLP_COOKIES
 
-# Each entry is a list of YouTube player clients tried in order.
-# If one chain raises an error the next is attempted.
-_CLIENT_CHAINS = [
-    ['tv_embedded', 'ios'],
-    ['mweb', 'android_testsuite'],
-    ['web_creator', 'mediaconnect'],
+# (client_list, format_string) — tried in order until one succeeds.
+# Some clients only expose muxed streams (no audio-only), so we fall back
+# to 'best' (video+audio) which FFmpeg's -vn flag strips down to audio.
+_FALLBACKS: list[tuple[list[str], str]] = [
+    (['tv_embedded', 'ios'],          'bestaudio/best'),
+    (['mweb', 'android_testsuite'],   'bestaudio/best'),
+    (['web_creator'],                  'bestaudio/best'),
+    (['tv_embedded'],                  'best'),
+    (['mweb'],                         'best'),
+    (['ios'],                          'best'),
 ]
 
 FFMPEG_OPTIONS = {
@@ -52,9 +55,10 @@ async def _reply(ctx: commands.Context, content: str):
 
 def _extract_stream_url(url: str) -> dict:
     last_exc: Exception | None = None
-    for clients in _CLIENT_CHAINS:
+    for clients, fmt in _FALLBACKS:
         opts = {
             **_YTDL_BASE,
+            'format': fmt,
             'extractor_args': {'youtube': {'player_client': clients}},
         }
         try:
