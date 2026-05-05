@@ -9,17 +9,23 @@ from config import Config
 from db.mongo import get_track
 from presets.tracks import get_preset, describe_preset, match_trigger, match_oneshot, get_mood
 
-YTDL_OPTIONS: dict = {
-    'format': 'bestaudio/best',
+_YTDL_BASE: dict = {
+    'format': 'bestaudio[ext=webm]/bestaudio[ext=m4a]/bestaudio/best',
     'quiet': True,
     'no_warnings': True,
     'default_search': 'auto',
     'source_address': '0.0.0.0',
-    # tv_embedded bypasses the "sign in" bot check; ios is a reliable fallback
-    'extractor_args': {'youtube': {'player_client': ['tv_embedded', 'ios']}},
 }
 if Config.YTDLP_COOKIES:
-    YTDL_OPTIONS['cookiefile'] = Config.YTDLP_COOKIES
+    _YTDL_BASE['cookiefile'] = Config.YTDLP_COOKIES
+
+# Each entry is a list of YouTube player clients tried in order.
+# If one chain raises an error the next is attempted.
+_CLIENT_CHAINS = [
+    ['tv_embedded', 'ios'],
+    ['mweb', 'android_testsuite'],
+    ['web_creator', 'mediaconnect'],
+]
 
 FFMPEG_OPTIONS = {
     'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5',
@@ -45,14 +51,25 @@ async def _reply(ctx: commands.Context, content: str):
 
 
 def _extract_stream_url(url: str) -> dict:
-    with yt_dlp.YoutubeDL(YTDL_OPTIONS) as ydl:
-        info = ydl.extract_info(url, download=False)
-        if 'entries' in info:
-            info = info['entries'][0]
-        return {
-            'stream_url': info['url'],
-            'title': info.get('title', 'Unknown'),
+    last_exc: Exception | None = None
+    for clients in _CLIENT_CHAINS:
+        opts = {
+            **_YTDL_BASE,
+            'extractor_args': {'youtube': {'player_client': clients}},
         }
+        try:
+            with yt_dlp.YoutubeDL(opts) as ydl:
+                info = ydl.extract_info(url, download=False)
+                if 'entries' in info:
+                    info = info['entries'][0]
+                return {
+                    'stream_url': info['url'],
+                    'title':      info.get('title', 'Unknown'),
+                }
+        except Exception as exc:
+            last_exc = exc
+            continue
+    raise last_exc
 
 
 class Music(commands.Cog):
