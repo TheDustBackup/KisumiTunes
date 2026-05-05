@@ -10,7 +10,7 @@ from db.mongo import get_track
 from presets.tracks import get_preset, describe_preset, match_trigger, match_oneshot, get_mood
 
 _YTDL_BASE: dict = {
-    'format': 'bestaudio[ext=webm]/bestaudio[ext=m4a]/bestaudio/best',
+    'format': 'bestaudio/best',
     'quiet': True,
     'no_warnings': True,
     'default_search': 'auto',
